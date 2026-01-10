@@ -25,7 +25,7 @@ def main():
       if mat[row][col] == 1:
         current_row_index = row
         current_col_index = col
-
+  
   row_wise_shift = abs(current_row_index - target_row_index)
   col_wise_shift = abs(current_col_index - target_col_index)
   min_num_moves = row_wise_shift + col_wise_shift
