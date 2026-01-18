@@ -6,11 +6,9 @@ def main():
     while i < n:
       if queue[i] == "G" and queue[i-1] == "B":
         queue[i-1],queue[i] = queue[i],queue[i-1]
-        i+= 1
-      i +=1
+        i+=1
+      i+=1
   print("".join(queue))
-
-
 
 if __name__ == "__main__":
   main()
