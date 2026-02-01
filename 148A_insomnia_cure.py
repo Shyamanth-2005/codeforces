@@ -1,22 +1,11 @@
-import sys
+
 def main():
-  k = int(input())
-  l =int(input())
-  m = int(input())
-  n = int(input())
-  d = int(input())
-  dragons = [i for i in range(1,d+1)]
-  for i in range(len(dragons)):
-    if dragons[i] % k == 0:
-      dragons[i] = 0
-    if dragons[i] % l == 0:
-      dragons[i] = 0
-    if dragons[i] % m == 0:
-      dragons[i] = 0
-    if dragons[i] % n == 0:
-      dragons[i] = 0
-  print(dragons.count(0)) 
-      
+  k,l,m,n,d = [int(input()) for _ in range(5)]
+  damaged = 0
+  for i in range(1,d+1):
+    if i % k == 0 or i % l == 0 or i % m == 0 or i % n == 0:
+      damaged += 1
+  print(damaged)
 
 if __name__ == "__main__":
   main()
